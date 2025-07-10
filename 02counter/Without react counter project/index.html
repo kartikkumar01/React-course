@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter : <span id='counter'>5</span></h1>
+    <button id='btn1'>Increase</button>
+    <button id='btn2'>Decrease</button>
+</body>
+<script>
+let btn1 = document.getElementById('btn1')
+let btn2 = document.getElementById('btn2')
+let counterDisplay = document.getElementById('counter')
+
+let counter = 5
+btn1.addEventListener('click', ()=>{
+    counter++
+    counterDisplay.innerHTML = counter
+})
+btn2.addEventListener('click', ()=>{
+    counter--
+    counterDisplay.innerHTML = counter
+})
+</script>
+</html>

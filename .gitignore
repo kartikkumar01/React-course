@@ -1,0 +1,5 @@
+# Ignore all build folders in subprojects
+**/build
+
+# Ignore all node_modules folders in subprojects
+**/node_modules
