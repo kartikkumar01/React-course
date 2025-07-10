@@ -1,7 +1,11 @@
-function App() {
+import React from 'react'
+
+let username = 'Kartik Kumar'
+
+function Hola() {
 return(
-  <h1>Hello World</h1>
+  // React.createElement('h1', null, `Hello from ${username}`)
+  <h1>Hello from {username}</h1>
 )
 }
-
-export default App
+export default Hola
