@@ -3,19 +3,18 @@ import './App.css'
 
 function App() {
 //Js is written here
-let [counter, updateUI] =  useState(5)
+let [counter, setCounter] =  useState(5)
 function increment(){
   if(counter < 20){
-    counter++
-    console.log(counter)
-    updateUI(counter)
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
   }
 }
 function decrement(){
   if(counter > 0){
-    counter--
-    console.log(counter)
-    updateUI(counter)
+    setCounter(counter - 1)
   }
 }
   return (

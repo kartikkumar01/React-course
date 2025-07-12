@@ -1,5 +1,9 @@
 # Ignore all build folders in subprojects
 **/build
+**/dist
 
 # Ignore all node_modules folders in subprojects
 **/node_modules
+
+#Ignore all cache files from parcel projects
+**/.parcel-cache
