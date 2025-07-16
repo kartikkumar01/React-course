@@ -7,3 +7,4 @@
 
 #Ignore all cache files from parcel projects
 **/.parcel-cache
+**/.gitignore
