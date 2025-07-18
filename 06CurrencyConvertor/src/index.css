@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+body{
+  background-image: url('../public/images/chai.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
