@@ -1,22 +1,21 @@
 import { useState } from "react"
 
 export default function App() {
-  let [username, setUsername] = useState('Kartik')
-
   return (
     <>
-    {username}
-      <Button text={username}/>
-      <Button text={username}/>
+      <Button>
+        <h1>Child 1</h1>
+        <h2>Child 2</h2>
+      </Button>
     </>
   )
 }
 
-function Button({text}) {
-  text += " kumar"
+function Button(props) {
+  console.log(props)
   return (
     <>
-      <button className="px-4 py-2 border border-blue-600 text-black bg-amber-200 font bold" onClick={() =>  setCount(curr => curr + 1)}>{text}</button>
+      <button className="px-4 py-2 border border-blue-600 text-black bg-amber-200 font bold">click me</button>
     </>
   )
 }
