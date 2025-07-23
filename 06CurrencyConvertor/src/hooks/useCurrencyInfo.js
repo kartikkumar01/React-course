@@ -12,7 +12,7 @@ function useCurrencyInfo(currency1){
             setData(response[currency1])
         })()
     }, [currency1])
-    return data
+    return data 
 }
 
 export  {useCurrencyInfo}

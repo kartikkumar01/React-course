@@ -1,19 +1,22 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
-export default function App(){
-  console.log('App Renders')
-  let [count, setCount] = useState(0)
-  let [count2, setCount2] = useState(10)
-  let countVariable = 1
-  useEffect(()=>{
-    console.log('useEffect called after the render')
-  },[count,countVariable])
-  return(
+export default function App() {
+  let [username, setUsername] = useState('Kartik')
+
+  return (
     <>
-    <h1>Hello Experimental {count}</h1>
-    <button onClick={()=>setCount(count)}>Change State1</button>
-    <button onClick={()=>setCount2(currState => currState+1)}>Change State2</button>
-    <button onClick={() => {++countVariable; console.log(countVariable)}}>Change Variable</button>
+    {username}
+      <Button text={username}/>
+      <Button text={username}/>
+    </>
+  )
+}
+
+function Button({text}) {
+  text += " kumar"
+  return (
+    <>
+      <button className="px-4 py-2 border border-blue-600 text-black bg-amber-200 font bold" onClick={() =>  setCount(curr => curr + 1)}>{text}</button>
     </>
   )
 }

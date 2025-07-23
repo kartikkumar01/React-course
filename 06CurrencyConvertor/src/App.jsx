@@ -1,6 +1,6 @@
 import { useState, useRef } from "react"
-import {InputBox} from "./components"
-import {useCurrencyInfo} from "./hooks"
+import { InputBox } from "./components"
+import { useCurrencyInfo } from "./hooks"
 
 function App() {
   {
@@ -24,8 +24,19 @@ function App() {
   //I am using my customHook here which returns a data state
   let currencies = useCurrencyInfo(currency1)
 
+  let [ele, setEle] = useState(null)
+  let cover = <div className="absolute top-0 right-0 bottom-0 left-0 z-50 text-9xl font-bold text-center" style={{ backgroundColor: 'rgba(0, 0, 0, 0.482)' }}>Sorry, you are offline</div>
+  window.addEventListener('offline', () => {
+    console.log('offline')
+    setEle(cover)
+  })
+  window.addEventListener('online', () => {
+    console.log('online')
+    setEle(null)
+  })
   return (
     <>
+      {ele}
       <div className=" w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat">
         <div className="w-full">
           <div className="w-full max-w-md ml-auto mr-15 border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
