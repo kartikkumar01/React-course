@@ -4,7 +4,7 @@ export default function App() {
   let name = 'Kartik Kumar'
   return (
     <>
-    <UserContextProvider value={name}>
+    <UserContextProvider value={{name}}>
     <Para />
     </UserContextProvider>
     <Para />
@@ -41,7 +41,7 @@ function Button() {
         bg-amber-200 
         font bold"
         >
-          Welcome {name}
+          Welcome {name.name}
         </button>
     </>
   )
